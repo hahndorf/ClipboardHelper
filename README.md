@@ -21,16 +21,18 @@ For this reason I had to keep the clipboard history turned off.
 
 ## Solution
 
-The solution I came up with is a small .Dot Framework assembly that can access 
+The solution I came up with is a small .Net Framework assembly that can access 
 new APIs in Windows 10 to copy text to the clipboard without adding it to 
 the history.
 
-The Assembly targets .Dot Framework Vs.4.8, I guess 4.6 and 4.7 should work as well.
+The Assembly targets .Net Framework Vs.4.8, I guess 4.6 and 4.7 should work as well.
 
 Also you need to have Windows 10 version 1903 or newer.
 
 Just build the project in Visual Studio and copy the resulting DLL to a 
 well-known location on your device.
+
+You can also download the DLL using the releases link on Github.
 
 ## Usage in PowerShell:
 
