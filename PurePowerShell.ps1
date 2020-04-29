@@ -1,7 +1,7 @@
 Function Set-ClipboardWithoutHistory([string]$Value)
 {
 
-    [int]RequestedOperationCopy = 1
+    [int]$RequestedOperationCopy = 1
 
     $null = [Windows.ApplicationModel.DataTransfer.DataPackage,Windows.ApplicationModel.DataTransfer,ContentType=WindowsRuntime]
     $null = [Windows.ApplicationModel.DataTransfer.ClipboardContentOptions,Windows.ApplicationModel.DataTransfer,ContentType=WindowsRuntime]
@@ -13,7 +13,7 @@ Function Set-ClipboardWithoutHistory([string]$Value)
     $cOptions.IsAllowedInHistory = $false
     $cOptions.IsRoamable = $false
 
-    $dataPackage.RequestedOperation = RequestedOperationCopy
+    $dataPackage.RequestedOperation = $RequestedOperationCopy
     $dataPackage.SetText($Value)
 
     [Windows.ApplicationModel.DataTransfer.Clipboard]::SetContentWithOptions($dataPackage, $cOptions) | Out-Null
