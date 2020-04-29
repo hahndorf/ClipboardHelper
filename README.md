@@ -48,3 +48,9 @@ The copy method has an overload which allows you to be more specific:
 This allows the history but prevents using the cloud sync.
 
 The basic Copy method has both parameters set to $false.
+
+## Pure PowerShell Solution
+
+It turns out you can do the same thing in PowerShell itself. The file `PurePowerShell.ps1` has a function `Set-ClipboardWithoutHistory` which allows you to copy a string to the Windows Clipboard without history or cloud.
+
+see also issue [#1](/../../issues/1)
